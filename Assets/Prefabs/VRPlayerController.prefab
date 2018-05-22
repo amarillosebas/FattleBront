@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 23291613007708664}
   - component: {fileID: 33754454300801580}
   - component: {fileID: 114096877369195736}
+  - component: {fileID: 114012321570017508}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -753,7 +754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1305254538523380
 GameObject:
   m_ObjectHideFlags: 1
@@ -1578,7 +1579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1552064608795838
 GameObject:
   m_ObjectHideFlags: 1
@@ -4240,7 +4241,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294965759
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6259,6 +6260,20 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114012321570017508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184216023758194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a1aa82c6939ac49a0caa9a11fc9cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerName: VRPlayerHitBox
+  guiltyChild: {fileID: 0}
+  fixHitboxes: 1
 --- !u!114 &114030830146325224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6758,6 +6773,7 @@ MonoBehaviour:
   controllers:
   - {fileID: 0}
   - {fileID: 0}
+  RigPosition: {fileID: 4931918638333078}
 --- !u!114 &114166016636399990
 MonoBehaviour:
   m_ObjectHideFlags: 1

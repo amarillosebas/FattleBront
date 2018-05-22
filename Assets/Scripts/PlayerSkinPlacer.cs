@@ -10,6 +10,7 @@ public class PlayerSkinPlacer : MonoBehaviour {
 	private PlayerSkinCommunicator _skinCommunicator;
 	public Animator cameraAnimator;
 	public VRTK_ControllerEvents[] controllers;
+	public Transform RigPosition;
 
 	void Start () {
 		_mySkin = Instantiate(skin, transform.position, transform.rotation);
@@ -20,8 +21,8 @@ public class PlayerSkinPlacer : MonoBehaviour {
 		_skinCommunicator.controllers = controllers;
 	}
 	
-	void FixedUpdate () {
-		_skinPosition = new Vector3 (transform.position.x, 0f, transform.position.z);
+	void Update () {
+		_skinPosition = new Vector3 (transform.position.x, RigPosition.position.y, transform.position.z);
 		_mySkin.transform.position = _skinPosition;
 	}
 }

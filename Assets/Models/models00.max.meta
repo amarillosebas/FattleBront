@@ -1,0 +1,761 @@
+fileFormatVersion: 2
+guid: 49051d97eebed1243b80cc8beb04846e
+timeCreated: 1449338052
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: AT-AT
+    100002: Bed
+    100004: Bed_Matress
+    100006: Bed_Pillow
+    100008: Chair
+    100010: Closet
+    100012: Closet_Door
+    100014: Clothes
+    100016: Curtain
+    100018: Curtain_Sustainer
+    100020: Desk
+    100022: DogBed
+    100024: Furniture
+    100026: Ground
+    100028: Ground_ShadowCaster
+    100030: Junk1
+    100032: Junk2
+    100034: MetalGrid
+    100036: //RootNode
+    100038: NightStand
+    100040: PC_Case
+    100042: PC_Keyboard
+    100044: PC_Mouse
+    100046: PC_Screen
+    100048: Reference
+    100050: Room_Ceiling
+    100052: Room_Ceiling_ShadowCaster
+    100054: Room_Floor
+    100056: Room_Wall_B
+    100058: Room_Wall_B_ShadowCaster
+    100060: Room_Wall_F
+    100062: Room_Wall_F_ShadowCaster
+    100064: Room_Wall_L
+    100066: Room_Wall_L_ShadowCaster
+    100068: Room_Wall_R
+    100070: Room_Wall_R_ShadowCaster
+    100072: TrashBin
+    100074: Junk3
+    100076: Starship_1
+    100078: Junk robo-t2
+    100080: Robo-T2
+    100082: Junk4
+    100084: Cylinder001
+    100086: Junk5
+    100088: Junk6
+    100090: Rock1
+    100092: Crater
+    100094: StarDestroyer
+    100096: StarDestroyerJunk
+    100098: StarDestroyerJunk0
+    100100: Nebulon
+    100102: JunkNebulon
+    100104: Box001
+    100106: Box002
+    100108: TieFighter
+    100110: X-Wing
+    100112: 3CP-O
+    100114: Bip002
+    100116: Bip002 Footsteps
+    100118: Bip002 Head
+    100120: Bip002 HeadNub
+    100122: Bip002 L Calf
+    100124: Bip002 L Clavicle
+    100126: Bip002 L Finger0
+    100128: Bip002 L Finger0Nub
+    100130: Bip002 L Foot
+    100132: Bip002 L Forearm
+    100134: Bip002 L Hand
+    100136: Bip002 L Thigh
+    100138: Bip002 L Toe0
+    100140: Bip002 L Toe0Nub
+    100142: Bip002 L UpperArm
+    100144: Bip002 Neck
+    100146: Bip002 Pelvis
+    100148: Bip002 R Calf
+    100150: Bip002 R Clavicle
+    100152: Bip002 R Finger0
+    100154: Bip002 R Finger0Nub
+    100156: Bip002 R Foot
+    100158: Bip002 R Forearm
+    100160: Bip002 R Hand
+    100162: Bip002 R Thigh
+    100164: Bip002 R Toe0
+    100166: Bip002 R Toe0Nub
+    100168: Bip002 R UpperArm
+    100170: Bip002 Spine
+    100172: Bip002 Spine1
+    100174: Bip002 Spine2
+    100176: Bip003
+    100178: Bip003 Footsteps
+    100180: Bip003 Head
+    100182: Bip003 HeadNub
+    100184: Bip003 L Calf
+    100186: Bip003 L Clavicle
+    100188: Bip003 L Finger0
+    100190: Bip003 L Finger0Nub
+    100192: Bip003 L Foot
+    100194: Bip003 L Forearm
+    100196: Bip003 L Hand
+    100198: Bip003 L Thigh
+    100200: Bip003 L Toe0
+    100202: Bip003 L Toe0Nub
+    100204: Bip003 L UpperArm
+    100206: Bip003 Neck
+    100208: Bip003 Pelvis
+    100210: Bip003 R Calf
+    100212: Bip003 R Clavicle
+    100214: Bip003 R Finger0
+    100216: Bip003 R Finger0Nub
+    100218: Bip003 R Foot
+    100220: Bip003 R Forearm
+    100222: Bip003 R Hand
+    100224: Bip003 R Thigh
+    100226: Bip003 R Toe0
+    100228: Bip003 R Toe0Nub
+    100230: Bip003 R UpperArm
+    100232: Bip003 Spine
+    100234: Bip003 Spine1
+    100236: Bip003 Spine2
+    100238: Bip004
+    100240: Bip004 Footsteps
+    100242: Bip004 Head
+    100244: Bip004 HeadNub
+    100246: Bip004 L Calf
+    100248: Bip004 L Clavicle
+    100250: Bip004 L Finger0
+    100252: Bip004 L Finger0Nub
+    100254: Bip004 L Foot
+    100256: Bip004 L Forearm
+    100258: Bip004 L Hand
+    100260: Bip004 L Thigh
+    100262: Bip004 L Toe0
+    100264: Bip004 L Toe0Nub
+    100266: Bip004 L UpperArm
+    100268: Bip004 Neck
+    100270: Bip004 Pelvis
+    100272: Bip004 R Calf
+    100274: Bip004 R Clavicle
+    100276: Bip004 R Finger0
+    100278: Bip004 R Finger0Nub
+    100280: Bip004 R Foot
+    100282: Bip004 R Forearm
+    100284: Bip004 R Hand
+    100286: Bip004 R Thigh
+    100288: Bip004 R Toe0
+    100290: Bip004 R Toe0Nub
+    100292: Bip004 R UpperArm
+    100294: Bip004 Spine
+    100296: Bip004 Spine1
+    100298: Bip004 Spine2
+    100300: Bone023
+    100302: Bone_Hand
+    100304: Bone_Hand_Arm_1
+    100306: Bone_Hand_Arm_2
+    100308: Bone_Hand_Index_1
+    100310: Bone_Hand_Index_2
+    100312: Bone_Hand_Index_3
+    100314: Bone_Hand_Middle_1
+    100316: Bone_Hand_Middle_2
+    100318: Bone_Hand_Middle_3
+    100320: Bone_Hand_Pinky_1
+    100322: Bone_Hand_Pinky_2
+    100324: Bone_Hand_Pinky_3
+    100326: Bone_Hand_Ring_1
+    100328: Bone_Hand_Ring_2
+    100330: Bone_Hand_Ring_3
+    100332: Bone_Hand_Thumb_1
+    100334: Bone_Hand_Thumb_2
+    100336: Bone_Hand_Thumb_3
+    100338: Bone_Walker_Body
+    100340: Bone_Walker_Foot_L
+    100342: Bone_Walker_Foot_R
+    100344: Bone_Walker_Head
+    100346: Bone_Walker_Leg_L_1
+    100348: Bone_Walker_Leg_L_2
+    100350: Bone_Walker_Leg_L_3
+    100352: Bone_Walker_Leg_R_1
+    100354: Bone_Walker_Leg_R_2
+    100356: Bone_Walker_Leg_R_3
+    100358: Bone_Walker_Nub_L
+    100360: Bone_Walker_Nub_R
+    100362: Box003
+    100364: Box004
+    100366: Box005
+    100368: Box006
+    100370: GeoSphere002
+    100372: GeoSphere003
+    100374: Hand
+    100376: IK Chain001
+    100378: IK Chain002
+    100380: LaserGun
+    100382: LaserGunDummy
+    100384: Phone
+    100386: Plane001
+    100388: Plane002
+    100390: Plane003
+    100392: Rebel2
+    100394: RebelSoldier
+    100396: Trooper
+    100398: Trooper2
+    100400: Walker
+    100402: GeoSphere004
+    100404: Plane004
+    100406: Plane005
+    100408: Screen_Image
+    100410: Stand
+    100412: Stand 1
+    100414: Stand 2
+    100416: ToyNebulon
+    100418: ToyStarDestroyer
+    100420: ToyTieFighter
+    100422: ToyX-Wing
+    100424: Box007
+    100426: Radio
+    100428: BlackDome
+    400000: AT-AT
+    400002: Bed
+    400004: Bed_Matress
+    400006: Bed_Pillow
+    400008: Chair
+    400010: Closet
+    400012: Closet_Door
+    400014: Clothes
+    400016: Curtain
+    400018: Curtain_Sustainer
+    400020: Desk
+    400022: DogBed
+    400024: Furniture
+    400026: Ground
+    400028: Ground_ShadowCaster
+    400030: Junk1
+    400032: Junk2
+    400034: MetalGrid
+    400036: //RootNode
+    400038: NightStand
+    400040: PC_Case
+    400042: PC_Keyboard
+    400044: PC_Mouse
+    400046: PC_Screen
+    400048: Reference
+    400050: Room_Ceiling
+    400052: Room_Ceiling_ShadowCaster
+    400054: Room_Floor
+    400056: Room_Wall_B
+    400058: Room_Wall_B_ShadowCaster
+    400060: Room_Wall_F
+    400062: Room_Wall_F_ShadowCaster
+    400064: Room_Wall_L
+    400066: Room_Wall_L_ShadowCaster
+    400068: Room_Wall_R
+    400070: Room_Wall_R_ShadowCaster
+    400072: TrashBin
+    400074: Junk3
+    400076: Starship_1
+    400078: Junk robo-t2
+    400080: Robo-T2
+    400082: Junk4
+    400084: Cylinder001
+    400086: Junk5
+    400088: Junk6
+    400090: Rock1
+    400092: Crater
+    400094: StarDestroyer
+    400096: StarDestroyerJunk
+    400098: StarDestroyerJunk0
+    400100: Nebulon
+    400102: JunkNebulon
+    400104: Box001
+    400106: Box002
+    400108: TieFighter
+    400110: X-Wing
+    400112: 3CP-O
+    400114: Bip002
+    400116: Bip002 Footsteps
+    400118: Bip002 Head
+    400120: Bip002 HeadNub
+    400122: Bip002 L Calf
+    400124: Bip002 L Clavicle
+    400126: Bip002 L Finger0
+    400128: Bip002 L Finger0Nub
+    400130: Bip002 L Foot
+    400132: Bip002 L Forearm
+    400134: Bip002 L Hand
+    400136: Bip002 L Thigh
+    400138: Bip002 L Toe0
+    400140: Bip002 L Toe0Nub
+    400142: Bip002 L UpperArm
+    400144: Bip002 Neck
+    400146: Bip002 Pelvis
+    400148: Bip002 R Calf
+    400150: Bip002 R Clavicle
+    400152: Bip002 R Finger0
+    400154: Bip002 R Finger0Nub
+    400156: Bip002 R Foot
+    400158: Bip002 R Forearm
+    400160: Bip002 R Hand
+    400162: Bip002 R Thigh
+    400164: Bip002 R Toe0
+    400166: Bip002 R Toe0Nub
+    400168: Bip002 R UpperArm
+    400170: Bip002 Spine
+    400172: Bip002 Spine1
+    400174: Bip002 Spine2
+    400176: Bip003
+    400178: Bip003 Footsteps
+    400180: Bip003 Head
+    400182: Bip003 HeadNub
+    400184: Bip003 L Calf
+    400186: Bip003 L Clavicle
+    400188: Bip003 L Finger0
+    400190: Bip003 L Finger0Nub
+    400192: Bip003 L Foot
+    400194: Bip003 L Forearm
+    400196: Bip003 L Hand
+    400198: Bip003 L Thigh
+    400200: Bip003 L Toe0
+    400202: Bip003 L Toe0Nub
+    400204: Bip003 L UpperArm
+    400206: Bip003 Neck
+    400208: Bip003 Pelvis
+    400210: Bip003 R Calf
+    400212: Bip003 R Clavicle
+    400214: Bip003 R Finger0
+    400216: Bip003 R Finger0Nub
+    400218: Bip003 R Foot
+    400220: Bip003 R Forearm
+    400222: Bip003 R Hand
+    400224: Bip003 R Thigh
+    400226: Bip003 R Toe0
+    400228: Bip003 R Toe0Nub
+    400230: Bip003 R UpperArm
+    400232: Bip003 Spine
+    400234: Bip003 Spine1
+    400236: Bip003 Spine2
+    400238: Bip004
+    400240: Bip004 Footsteps
+    400242: Bip004 Head
+    400244: Bip004 HeadNub
+    400246: Bip004 L Calf
+    400248: Bip004 L Clavicle
+    400250: Bip004 L Finger0
+    400252: Bip004 L Finger0Nub
+    400254: Bip004 L Foot
+    400256: Bip004 L Forearm
+    400258: Bip004 L Hand
+    400260: Bip004 L Thigh
+    400262: Bip004 L Toe0
+    400264: Bip004 L Toe0Nub
+    400266: Bip004 L UpperArm
+    400268: Bip004 Neck
+    400270: Bip004 Pelvis
+    400272: Bip004 R Calf
+    400274: Bip004 R Clavicle
+    400276: Bip004 R Finger0
+    400278: Bip004 R Finger0Nub
+    400280: Bip004 R Foot
+    400282: Bip004 R Forearm
+    400284: Bip004 R Hand
+    400286: Bip004 R Thigh
+    400288: Bip004 R Toe0
+    400290: Bip004 R Toe0Nub
+    400292: Bip004 R UpperArm
+    400294: Bip004 Spine
+    400296: Bip004 Spine1
+    400298: Bip004 Spine2
+    400300: Bone023
+    400302: Bone_Hand
+    400304: Bone_Hand_Arm_1
+    400306: Bone_Hand_Arm_2
+    400308: Bone_Hand_Index_1
+    400310: Bone_Hand_Index_2
+    400312: Bone_Hand_Index_3
+    400314: Bone_Hand_Middle_1
+    400316: Bone_Hand_Middle_2
+    400318: Bone_Hand_Middle_3
+    400320: Bone_Hand_Pinky_1
+    400322: Bone_Hand_Pinky_2
+    400324: Bone_Hand_Pinky_3
+    400326: Bone_Hand_Ring_1
+    400328: Bone_Hand_Ring_2
+    400330: Bone_Hand_Ring_3
+    400332: Bone_Hand_Thumb_1
+    400334: Bone_Hand_Thumb_2
+    400336: Bone_Hand_Thumb_3
+    400338: Bone_Walker_Body
+    400340: Bone_Walker_Foot_L
+    400342: Bone_Walker_Foot_R
+    400344: Bone_Walker_Head
+    400346: Bone_Walker_Leg_L_1
+    400348: Bone_Walker_Leg_L_2
+    400350: Bone_Walker_Leg_L_3
+    400352: Bone_Walker_Leg_R_1
+    400354: Bone_Walker_Leg_R_2
+    400356: Bone_Walker_Leg_R_3
+    400358: Bone_Walker_Nub_L
+    400360: Bone_Walker_Nub_R
+    400362: Box003
+    400364: Box004
+    400366: Box005
+    400368: Box006
+    400370: GeoSphere002
+    400372: GeoSphere003
+    400374: Hand
+    400376: IK Chain001
+    400378: IK Chain002
+    400380: LaserGun
+    400382: LaserGunDummy
+    400384: Phone
+    400386: Plane001
+    400388: Plane002
+    400390: Plane003
+    400392: Rebel2
+    400394: RebelSoldier
+    400396: Trooper
+    400398: Trooper2
+    400400: Walker
+    400402: GeoSphere004
+    400404: Plane004
+    400406: Plane005
+    400408: Screen_Image
+    400410: Stand
+    400412: Stand 1
+    400414: Stand 2
+    400416: ToyNebulon
+    400418: ToyStarDestroyer
+    400420: ToyTieFighter
+    400422: ToyX-Wing
+    400424: Box007
+    400426: Radio
+    400428: BlackDome
+    2300000: AT-AT
+    2300002: Bed
+    2300004: Bed_Matress
+    2300006: Bed_Pillow
+    2300008: Chair
+    2300010: Closet
+    2300012: Closet_Door
+    2300014: Clothes
+    2300016: Curtain
+    2300018: Curtain_Sustainer
+    2300020: Desk
+    2300022: DogBed
+    2300024: Furniture
+    2300026: Ground
+    2300028: Ground_ShadowCaster
+    2300030: Junk1
+    2300032: Junk2
+    2300034: MetalGrid
+    2300036: NightStand
+    2300038: PC_Case
+    2300040: PC_Keyboard
+    2300042: PC_Mouse
+    2300044: PC_Screen
+    2300046: Reference
+    2300048: Room_Ceiling
+    2300050: Room_Ceiling_ShadowCaster
+    2300052: Room_Floor
+    2300054: Room_Wall_B
+    2300056: Room_Wall_B_ShadowCaster
+    2300058: Room_Wall_F
+    2300060: Room_Wall_F_ShadowCaster
+    2300062: Room_Wall_L
+    2300064: Room_Wall_L_ShadowCaster
+    2300066: Room_Wall_R
+    2300068: Room_Wall_R_ShadowCaster
+    2300070: TrashBin
+    2300072: Junk3
+    2300074: Starship_1
+    2300076: Junk robo-t2
+    2300078: Robo-T2
+    2300080: Junk4
+    2300082: Cylinder001
+    2300084: Junk5
+    2300086: Junk6
+    2300088: Rock1
+    2300090: Crater
+    2300092: StarDestroyer
+    2300094: StarDestroyerJunk
+    2300096: StarDestroyerJunk0
+    2300098: Nebulon
+    2300100: JunkNebulon
+    2300102: Box001
+    2300104: Box002
+    2300106: TieFighter
+    2300108: X-Wing
+    2300110: 3CP-O
+    2300112: Box003
+    2300114: Box004
+    2300116: Box005
+    2300118: Box006
+    2300120: GeoSphere002
+    2300122: GeoSphere003
+    2300124: LaserGun
+    2300126: LaserGunDummy
+    2300128: Phone
+    2300130: Plane001
+    2300132: Plane002
+    2300134: Plane003
+    2300136: GeoSphere004
+    2300138: Plane004
+    2300140: Plane005
+    2300142: Screen_Image
+    2300144: Stand
+    2300146: Stand 1
+    2300148: Stand 2
+    2300150: ToyNebulon
+    2300152: ToyStarDestroyer
+    2300154: ToyTieFighter
+    2300156: ToyX-Wing
+    2300158: Box007
+    2300160: Radio
+    2300162: BlackDome
+    3300000: AT-AT
+    3300002: Bed
+    3300004: Bed_Matress
+    3300006: Bed_Pillow
+    3300008: Chair
+    3300010: Closet
+    3300012: Closet_Door
+    3300014: Clothes
+    3300016: Curtain
+    3300018: Curtain_Sustainer
+    3300020: Desk
+    3300022: DogBed
+    3300024: Furniture
+    3300026: Ground
+    3300028: Ground_ShadowCaster
+    3300030: Junk1
+    3300032: Junk2
+    3300034: MetalGrid
+    3300036: NightStand
+    3300038: PC_Case
+    3300040: PC_Keyboard
+    3300042: PC_Mouse
+    3300044: PC_Screen
+    3300046: Reference
+    3300048: Room_Ceiling
+    3300050: Room_Ceiling_ShadowCaster
+    3300052: Room_Floor
+    3300054: Room_Wall_B
+    3300056: Room_Wall_B_ShadowCaster
+    3300058: Room_Wall_F
+    3300060: Room_Wall_F_ShadowCaster
+    3300062: Room_Wall_L
+    3300064: Room_Wall_L_ShadowCaster
+    3300066: Room_Wall_R
+    3300068: Room_Wall_R_ShadowCaster
+    3300070: TrashBin
+    3300072: Junk3
+    3300074: Starship_1
+    3300076: Junk robo-t2
+    3300078: Robo-T2
+    3300080: Junk4
+    3300082: Cylinder001
+    3300084: Junk5
+    3300086: Junk6
+    3300088: Rock1
+    3300090: Crater
+    3300092: StarDestroyer
+    3300094: StarDestroyerJunk
+    3300096: StarDestroyerJunk0
+    3300098: Nebulon
+    3300100: JunkNebulon
+    3300102: Box001
+    3300104: Box002
+    3300106: TieFighter
+    3300108: X-Wing
+    3300110: 3CP-O
+    3300112: Box003
+    3300114: Box004
+    3300116: Box005
+    3300118: Box006
+    3300120: GeoSphere002
+    3300122: GeoSphere003
+    3300124: LaserGun
+    3300126: LaserGunDummy
+    3300128: Phone
+    3300130: Plane001
+    3300132: Plane002
+    3300134: Plane003
+    3300136: GeoSphere004
+    3300138: Plane004
+    3300140: Plane005
+    3300142: Screen_Image
+    3300144: Stand
+    3300146: Stand 1
+    3300148: Stand 2
+    3300150: ToyNebulon
+    3300152: ToyStarDestroyer
+    3300154: ToyTieFighter
+    3300156: ToyX-Wing
+    3300158: Box007
+    3300160: Radio
+    3300162: BlackDome
+    4300000: Room_Floor
+    4300002: Room_Wall_B
+    4300004: Room_Ceiling
+    4300006: Room_Ceiling_ShadowCaster
+    4300008: Curtain
+    4300010: Curtain_Sustainer
+    4300012: Room_Wall_B_ShadowCaster
+    4300014: Room_Wall_L
+    4300016: Room_Wall_L_ShadowCaster
+    4300018: Room_Wall_F
+    4300020: Room_Wall_F_ShadowCaster
+    4300022: Room_Wall_R
+    4300024: Room_Wall_R_ShadowCaster
+    4300026: Reference
+    4300028: Desk
+    4300030: Chair
+    4300032: Bed
+    4300034: Bed_Matress
+    4300036: Bed_Pillow
+    4300038: Furniture
+    4300040: NightStand
+    4300042: Closet
+    4300044: Closet_Door
+    4300046: Clothes
+    4300048: TrashBin
+    4300050: DogBed
+    4300052: PC_Screen
+    4300054: PC_Case
+    4300056: PC_Keyboard
+    4300058: PC_Mouse
+    4300060: Ground
+    4300062: Ground_ShadowCaster
+    4300064: AT-AT
+    4300066: Junk1
+    4300068: MetalGrid
+    4300070: Junk2
+    4300072: Starship_1
+    4300074: Junk3
+    4300076: Robo-T2
+    4300078: Junk robo-t2
+    4300080: Junk4
+    4300082: Junk5
+    4300084: Cylinder001
+    4300086: Junk6
+    4300088: Rock1
+    4300090: Crater
+    4300092: StarDestroyer
+    4300094: StarDestroyerJunk0
+    4300096: StarDestroyerJunk
+    4300098: Nebulon
+    4300100: JunkNebulon
+    4300102: TieFighter
+    4300104: Box001
+    4300106: Box002
+    4300108: X-Wing
+    4300110: 3CP-O
+    4300112: RebelSoldier
+    4300114: Rebel2
+    4300116: Plane001
+    4300118: Plane002
+    4300120: Trooper
+    4300122: GeoSphere002
+    4300124: GeoSphere003
+    4300126: LaserGunDummy
+    4300128: Trooper2
+    4300130: Walker
+    4300132: LaserGun
+    4300134: Box003
+    4300136: Box004
+    4300138: Box005
+    4300140: Box006
+    4300142: Plane003
+    4300144: Hand
+    4300146: Phone
+    4300148: GeoSphere004
+    4300150: Plane004
+    4300152: Plane005
+    4300154: Screen_Image
+    4300156: ToyTieFighter
+    4300158: Stand
+    4300160: ToyX-Wing
+    4300162: Stand
+    4300164: ToyStarDestroyer
+    4300166: ToyNebulon
+    4300168: Stand
+    4300170: Box007
+    4300172: Radio
+    4300174: BlackDome
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hand
+    13700002: Rebel2
+    13700004: RebelSoldier
+    13700006: Trooper
+    13700008: Trooper2
+    13700010: Walker
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .075000003
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
