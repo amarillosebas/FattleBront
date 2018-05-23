@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Explosion
   - ExcludeTeleport
+  - SaberReflect
+  - Conductor
+  - Grass
+  - Tornado
+  - Rebel
+  - Trooper
   layers:
   - Default
   - TransparentFX
