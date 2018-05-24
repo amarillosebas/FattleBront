@@ -17,7 +17,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         [Tooltip("The tag of the object that we are searching for")]
         public SharedString targetTag;
         [Tooltip("The LayerMask of the objects that we are searching for")]
-        public LayerMask objectLayerMask;
+        public Shared_LayerMask objectLayerMask;
         [Tooltip("How far away the unit can hear")]
         public SharedFloat hearingRadius = 50;
         [Tooltip("The further away a sound source is the less likely the agent will be able to hear it. " +
@@ -45,9 +45,9 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                 returnedObject.Value = objectFound;
             } else if (targetObject.Value == null) { // If the target object is null then determine if there are any objects within hearing range based on the layer mask
                 if (usePhysics2D) {
-                    returnedObject.Value = MovementUtility.WithinHearingRange2D(transform, offset.Value, audibilityThreshold.Value, hearingRadius.Value, objectLayerMask);
+                    returnedObject.Value = MovementUtility.WithinHearingRange2D(transform, offset.Value, audibilityThreshold.Value, hearingRadius.Value, objectLayerMask.Value);
                 } else {
-                    returnedObject.Value = MovementUtility.WithinHearingRange(transform, offset.Value, audibilityThreshold.Value, hearingRadius.Value, objectLayerMask);
+                    returnedObject.Value = MovementUtility.WithinHearingRange(transform, offset.Value, audibilityThreshold.Value, hearingRadius.Value, objectLayerMask.Value);
                 }
             } else {
                 GameObject target;

@@ -29,8 +29,8 @@ TagManager:
   - PlayerInteract
   - PlayerInteractableTrigger
   - PlayerPickUp
-  - 
-  - 
+  - AiTrooper
+  - AiRebel
   - 
   - 
   - 

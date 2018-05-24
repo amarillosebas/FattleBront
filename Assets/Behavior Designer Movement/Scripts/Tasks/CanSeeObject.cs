@@ -17,7 +17,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         [Tooltip("The tag of the object that we are searching for")]
         public SharedString targetTag;
         [Tooltip("The LayerMask of the objects that we are searching for")]
-        public LayerMask objectLayerMask;
+        public Shared_LayerMask objectLayerMask;
         [Tooltip("The LayerMask of the objects to ignore when performing the line of sight check")]
         public LayerMask ignoreLayerMask = 1 << LayerMask.NameToLayer("Ignore Raycast");
         [Tooltip("The field of view angle of the agent (in degrees)")]
@@ -57,7 +57,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                     }
                     returnedObject.Value = objectFound;
                 } else if (targetObject.Value == null) { // If the target object is null then determine if there are any objects within sight based on the layer mask
-                    returnedObject.Value = MovementUtility.WithinSight2D(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, objectLayerMask, targetOffset.Value, angleOffset2D.Value, ignoreLayerMask);
+                    returnedObject.Value = MovementUtility.WithinSight2D(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, objectLayerMask.Value, targetOffset.Value, angleOffset2D.Value, ignoreLayerMask);
                 } else if (!string.IsNullOrEmpty(targetTag.Value)) { // If the target tag is not null then determine if there are any objects within sight based on the tag
                     returnedObject.Value = MovementUtility.WithinSight2D(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, GameObject.FindGameObjectWithTag(targetTag.Value), targetOffset.Value, angleOffset2D.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
                 } else { // If the target is not null then determine if that object is within sight
@@ -80,7 +80,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                     }
                     returnedObject.Value = objectFound;
                 } else if (targetObject.Value == null) { // If the target object is null then determine if there are any objects within sight based on the layer mask
-                    returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, objectLayerMask, targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
+                    returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, objectLayerMask.Value, targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
                 } else if (!string.IsNullOrEmpty(targetTag.Value)) { // If the target tag is not null then determine if there are any objects within sight based on the tag
                     returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, GameObject.FindGameObjectWithTag(targetTag.Value), targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
                 } else { // If the target is not null then determine if that object is within sight

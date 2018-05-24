@@ -1,41 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BehaviorDesigner.Runtime;
+//using BehaviorDesigner.Runtime;
 
 public class SoldierTransformManager : MonoBehaviour {
-	public BehaviorTree behaviorTree;
-
-	public SoldierStats statsInfo;
-
 	public Transform target;
-	public bool targetSighted;
+	public AnimatorManager animatorManager;
+	//public bool targetSighted;
+
+	public AiSettings ai;
+
+	public float extraRotationSpeed;
 
 	void Start () {
-		behaviorTree.SetVariableValue("movementSpeed", statsInfo.movementSpeed);
-		behaviorTree.SetVariableValue("rotationSpeed", statsInfo.rotationSpeed);
-		behaviorTree.SetVariableValue("minWanderDistance", statsInfo.minWanderDistance);
-		behaviorTree.SetVariableValue("maxWanderDistance", statsInfo.maxWanderDistance);
-		behaviorTree.SetVariableValue("minWanderPause", statsInfo.minWanderPause);
-		behaviorTree.SetVariableValue("maxWanderPause", statsInfo.maxWanderPause);
-		behaviorTree.SetVariableValue("wanderRate", statsInfo.wanderRate);
+		
 	}
 	
 	void Update () {
-		if (targetSighted) {
-			if (target) {
-				Quaternion newRotation =  Quaternion.RotateTowards (
-					transform.rotation,
-					Quaternion.LookRotation(target.position - transform.position),
-					Time.deltaTime * statsInfo.rotationSpeed
-				);
-
-				newRotation.eulerAngles = new Vector3 (
-					0f, -newRotation.eulerAngles.y, 0f
-				);
-
-				transform.rotation = newRotation;
+		if (animatorManager.navAgent.isStopped) {
+			if (ai.GetTarget(out target)) {
+				LookAtTarget(target.position);
 			}
+		} else {
+			AddNavAgentRotation();
 		}
+	}
+
+	void AddNavAgentRotation () {
+		Vector3 lookrotation = animatorManager.navAgent.steeringTarget - transform.position;
+		if (lookrotation.magnitude > 0.001f) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookrotation), extraRotationSpeed * Time.deltaTime);
+	}
+	void LookAtTarget (Vector3 d) {
+		Vector3 lookPos = d - transform.position;
+		lookPos.y = 0;
+		Quaternion rotation = Quaternion.LookRotation(lookPos);
+		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, ai.statsInfo.rotationSpeed * Time.deltaTime);
 	}
 }
