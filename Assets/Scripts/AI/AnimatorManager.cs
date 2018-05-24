@@ -12,10 +12,6 @@ public class AnimatorManager : MonoBehaviour {
 		Walk
 	}
 	public MoveState moveState;
-
-	void Start () {
-		
-	}
 	
 	void Update () {
 		if (navAgent.hasPath) {
@@ -30,10 +26,4 @@ public class AnimatorManager : MonoBehaviour {
 	public void Shoot () {
 		soldierAnimator.SetTrigger("Shoot");
 	}
-
-	/*float GetAngularVelocity () {
-		Vector3 s = navAgent.transform.InverseTransformDirection(navAgent.velocity).normalized;
-		float t = s.x;
-		return t;
-	}*/
 }

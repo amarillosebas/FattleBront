@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: GenericRifle
   damage: 50
-  fireRate: 2
+  fireRate: 0.5
   shotLifeSpan: 5
   projectileSpeed: 50
   projectileForce: 0
