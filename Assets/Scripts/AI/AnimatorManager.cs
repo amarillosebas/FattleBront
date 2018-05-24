@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AnimatorManager : MonoBehaviour {
+	[Header("Dependencies")]
 	public Animator soldierAnimator;
 	public NavMeshAgent navAgent;
+	public AiSettings ai;
 
+	//[Space(5f)]
 	public enum MoveState {
 		Idle,
 		Walk
@@ -25,5 +28,12 @@ public class AnimatorManager : MonoBehaviour {
 
 	public void Shoot () {
 		soldierAnimator.SetTrigger("Shoot");
+	}
+
+	public void Die () {
+		ai.behaviorTree.enabled = false;
+		navAgent.enabled = false;
+		Collider c = GetComponent<Collider>();
+		c.enabled = false;
 	}
 }

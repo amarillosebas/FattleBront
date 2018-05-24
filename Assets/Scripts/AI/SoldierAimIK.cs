@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoldierAimIK : MonoBehaviour {
+	[Header("Dependencies")]
 	public AnimatorManager animatorManager;
 	public AiSettings ai;
+	
+	[Space(5f)]
 	public bool ikActive = false;
 	public Transform target;
 	public float heightCompensation = 1f;

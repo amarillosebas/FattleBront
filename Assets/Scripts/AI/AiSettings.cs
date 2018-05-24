@@ -4,9 +4,11 @@ using UnityEngine;
 using BehaviorDesigner.Runtime;
 
 public class AiSettings : MonoBehaviour {
+	[Header("Dependencies")]
 	public BehaviorTree behaviorTree;
 	public SoldierStats statsInfo;
 
+	[Space(5f)]
 	public Shared_LayerMask targetLayers;
 
 	void Start () {

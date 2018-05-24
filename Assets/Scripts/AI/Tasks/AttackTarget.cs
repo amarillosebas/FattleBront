@@ -30,11 +30,21 @@ public class AttackTarget : NavMeshMovement {
 			Stop();
 			canAttack.Value = true;
 		}
-		return TaskStatus.Running;
+
+		if (target.Value) {
+			EntityHP hp = target.Value.GetComponent<EntityHP>();
+			if (hp.currentHP <= 0) return TaskStatus.Success;
+			else return TaskStatus.Running;
+		} else {
+			return TaskStatus.Failure;
+		}
 	}
 
 	bool IsWithinRange () {
-		float distance = (target.Value.transform.position - transform.position).magnitude;
+		float distance = 0f;
+		if (target.Value) distance = (target.Value.transform.position - transform.position).magnitude;
+		else return false;
+
 		if (distance <= maxAttackDistance.Value) {
 			if (distance >= minAttackDistance.Value) {
 				return true;
@@ -57,7 +67,9 @@ public class AttackTarget : NavMeshMovement {
 			}
 		} else {
 			//flee behavior
-			return transform.position + (transform.position - target.Value.transform.position).normalized;
+			canAttack.Value = false;
+			if (target.Value) return transform.position + (transform.position - target.Value.transform.position).normalized;
+			else return transform.position;
 		}
 
 		return targetPosition.Value;

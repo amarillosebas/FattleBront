@@ -4,12 +4,12 @@ using UnityEngine;
 //using BehaviorDesigner.Runtime;
 
 public class SoldierTransformManager : MonoBehaviour {
+	[Header("Dependencies")]
 	public Transform target;
 	public AnimatorManager animatorManager;
-	//public bool targetSighted;
-
 	public AiSettings ai;
 
+	[Space(5f)]
 	public float extraRotationSpeed;
 
 	void Start () {
@@ -17,7 +17,7 @@ public class SoldierTransformManager : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (animatorManager.navAgent.isStopped) {
+		if (animatorManager.navAgent.enabled) if (animatorManager.navAgent.isStopped) {
 			if (ai.GetTarget(out target)) {
 				LookAtTarget(target.position);
 			}

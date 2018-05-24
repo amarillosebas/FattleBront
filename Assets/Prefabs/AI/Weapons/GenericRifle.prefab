@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4703570631241114}
   m_Layer: 0
-  m_Name: muzzle
+  m_Name: nozzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,5 +183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInfo: {fileID: 11400000, guid: a921a04244637194cb54daa211924eb5, type: 2}
-  muzzle: {fileID: 4703570631241114}
+  nozzle: {fileID: 4703570631241114}
   shotPrefab: {fileID: 163672, guid: fcfb51ced5e88fc4a93a8eea0822d58a, type: 2}
+  nozzleLookAtAngle: 90

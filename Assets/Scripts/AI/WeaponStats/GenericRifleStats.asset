@@ -13,9 +13,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: GenericRifle
   damage: 50
-  fireRate: 0.5
-  shotLifeSpan: 5
+  fireRate: 0.25
+  accuracy: 5
+  recoil: 0
+  shotSFX:
+  - {fileID: 8300000, guid: 202bbdd38e1b4f74983208bbaae519a4, type: 3}
+  - {fileID: 8300000, guid: fe952042be7ddba43b3653879e8bba1d, type: 3}
   projectileSpeed: 50
   projectileForce: 0
+  shotLifeSpan: 5
+  collisionDistance: 1
   minAttackDistance: 4
   maxAttackDistance: 20
