@@ -16,6 +16,7 @@ public class AttackTarget : NavMeshMovement {
 	private float _reactionTimeCounter = 0f;
 
 	public SharedBool canAttack;
+	public SharedBool cannotLoseTarget;
 
 	public override void OnStart () {
 		base.OnStart();
@@ -33,7 +34,10 @@ public class AttackTarget : NavMeshMovement {
 
 		if (target.Value) {
 			EntityHP hp = target.Value.GetComponent<EntityHP>();
-			if (hp.currentHP <= 0) return TaskStatus.Success;
+			if (hp) {
+				if (hp.currentHP <= 0) return TaskStatus.Success;
+				else return TaskStatus.Running;
+			}
 			else return TaskStatus.Running;
 		} else {
 			return TaskStatus.Failure;
@@ -51,10 +55,12 @@ public class AttackTarget : NavMeshMovement {
 			} else {
 				//modify destination to be away from the target
 				_goToTarget = false;
+				cannotLoseTarget.Value = true;
 			}
 		} else {
 			//modify destination to be the target
 			_goToTarget = true;
+			cannotLoseTarget.Value = false;
 		}
 		return false;
 	}

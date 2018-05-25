@@ -12,6 +12,15 @@ public class AiSettings : MonoBehaviour {
 	public Shared_LayerMask targetLayers;
 
 	void Start () {
+		switch (transform.tag) {
+			case "Trooper": targetTag = "Rebel"; break;
+			case "Rebel": targetTag = "Trooper"; break;
+		}
+		SetSharedVariables();
+	}
+
+	string targetTag = "";
+	void SetSharedVariables () {
 		behaviorTree.SetVariableValue("movementSpeed", statsInfo.movementSpeed);
 		behaviorTree.SetVariableValue("rotationSpeed", statsInfo.rotationSpeed);
 		behaviorTree.SetVariableValue("angularSpeed", statsInfo.rotationSpeed * 100f);
@@ -21,6 +30,7 @@ public class AiSettings : MonoBehaviour {
 		behaviorTree.SetVariableValue("maxWanderPause", statsInfo.maxWanderPause);
 		behaviorTree.SetVariableValue("wanderRate", statsInfo.wanderRate);
 		behaviorTree.SetVariableValue("targetLayers", targetLayers);
+		behaviorTree.SetVariableValue("targetTag", targetTag);
 		behaviorTree.SetVariableValue("targetTooCloseReactionTime", statsInfo.targetTooCloseReactionTime);
 	}
 	

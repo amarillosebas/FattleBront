@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 4425771017069986}
   - component: {fileID: 82671511651416280}
   - component: {fileID: 82350845466727214}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: WeaponAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4302707029707800}
   - component: {fileID: 82158856901863778}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: VoiceAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,6 +1583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponManager: {fileID: 114907980524109372}
+  audioSourcesParent: {fileID: 1960964390462462}
   voiceAudio: {fileID: 1968395377513612}
   weaponAudio: {fileID: 1573118234139602}
 --- !u!114 &114847025086941176

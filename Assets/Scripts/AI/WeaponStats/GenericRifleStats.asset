@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: GenericRifleStats
   m_EditorClassIdentifier: 
   name: GenericRifle
-  damage: 50
-  fireRate: 0.25
-  accuracy: 5
+  damage: 35
+  fireRate: 0.5
+  accuracy: 2
   recoil: 0
   shotSFX:
   - {fileID: 8300000, guid: 202bbdd38e1b4f74983208bbaae519a4, type: 3}

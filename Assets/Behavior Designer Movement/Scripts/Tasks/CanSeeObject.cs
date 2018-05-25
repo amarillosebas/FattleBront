@@ -80,9 +80,10 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                     }
                     returnedObject.Value = objectFound;
                 } else if (targetObject.Value == null) { // If the target object is null then determine if there are any objects within sight based on the layer mask
+                    //Debug.Log("targetObject");
                     returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, objectLayerMask.Value, targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
                 } else if (!string.IsNullOrEmpty(targetTag.Value)) { // If the target tag is not null then determine if there are any objects within sight based on the tag
-                    returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, GameObject.FindGameObjectWithTag(targetTag.Value), targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
+                   returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, GameObject.FindGameObjectWithTag(targetTag.Value), targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
                 } else { // If the target is not null then determine if that object is within sight
                     returnedObject.Value = MovementUtility.WithinSight(transform, offset.Value, fieldOfViewAngle.Value, viewDistance.Value, targetObject.Value, targetOffset.Value, ignoreLayerMask, useTargetBone.Value, targetBone);
                 }

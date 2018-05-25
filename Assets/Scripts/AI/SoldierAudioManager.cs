@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class SoldierAudioManager : AudioManager {
 	[Header("Dependencies")]
 	public SoldierWeaponManager weaponManager;
+	public GameObject audioSourcesParent;
 
 	[Space(5f)]
 	public GameObject voiceAudio;
@@ -31,5 +32,10 @@ public class SoldierAudioManager : AudioManager {
 
 	public void TakeDamage () {
 		
+	}
+
+	public void Die () {
+		audioSourcesParent.transform.parent = null;
+		Destroy(audioSourcesParent, 2f);
 	}
 }

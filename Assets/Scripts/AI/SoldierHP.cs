@@ -29,6 +29,7 @@ public class SoldierHP : EntityHP {
 
 	public override void Die () {
 		animatorManager.Die();
+		audioManager.Die();
 		Destroy(gameObject, corpseLifeSpan);
 	}
 }

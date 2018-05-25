@@ -103,9 +103,11 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
             if (direction.magnitude < viewDistance && angle < fieldOfViewAngle * 0.5f) {
                 // The hit agent needs to be within view of the current agent
                 if (LineOfSight(transform, positionOffset, targetObject, targetOffset, usePhysics2D, ignoreLayerMask) != null) {
+                    //Debug.Log("not within sight");
                     return targetObject; // return the target object meaning it is within sight
                 } else if (GetComponentForType<Collider>(targetObject) == null && GetComponentForType<Collider2D>(targetObject) == null) {
                     // If the linecast doesn't hit anything then that the target object doesn't have a collider and there is nothing in the way
+                    //Debug.Log("within sight");
                     if (targetObject.gameObject.activeSelf)
                         return targetObject;
                 }
