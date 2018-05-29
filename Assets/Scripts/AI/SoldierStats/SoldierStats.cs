@@ -20,4 +20,8 @@ public class SoldierStats : ScriptableObject {
 	[Space(5f)]
 	[Header("Attack Behavior")]
 	public float targetTooCloseReactionTime;
+	public float minAttackMoveTime;
+	public float maxAttackMoveTime;
+	public float minAttackMoveDistance;
+	public float maxAttackMoveDistance;
 }

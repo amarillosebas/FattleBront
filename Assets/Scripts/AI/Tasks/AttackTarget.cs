@@ -18,18 +18,43 @@ public class AttackTarget : NavMeshMovement {
 	public SharedBool canAttack;
 	public SharedBool cannotLoseTarget;
 
+	private bool _pauseAttackToMove = false;
+	private bool _canAttackMove = false;
+	public SharedFloat minAttackMovetime;
+	public SharedFloat maxAttackMovetime;
+
+	public SharedFloat minAttackMoveDistance = 0.5f;
+	public SharedFloat maxAttackMoveDistance = 1.5f;
+	public SharedFloat wanderRate = 2;
+
 	public override void OnStart () {
 		base.OnStart();
 		SetDestination(Target());
+
+		if (minAttackMovetime.Value > 0f && maxAttackMovetime.Value > 0f) {
+			_canAttackMove = true;
+			_moveToRandomPointCounter = Time.time + Random.Range(minAttackMovetime.Value, maxAttackMovetime.Value);
+		}
 	}
 	
 	public override TaskStatus OnUpdate () {
-		if (CanMove() && !IsWithinRange()) {
-			SetDestination(Target());
-			canAttack.Value = false;
+		CanMoveToRandomPoint();
+
+		if (!_pauseAttackToMove) {
+			if (CanCatchUpWithPlayer() && !IsWithinRange()) {
+				SetDestination(Target());
+				canAttack.Value = false;
+			} else {
+				Stop();
+				canAttack.Value = true;
+			}
 		} else {
-			Stop();
-			canAttack.Value = true;
+			MoveToRandomPoint();
+			if (HasArrived()) {
+				_movingToRandomPoint = false;
+				_pauseAttackToMove = false;
+				canAttack.Value = true;
+			}
 		}
 
 		if (target.Value) {
@@ -44,7 +69,7 @@ public class AttackTarget : NavMeshMovement {
 		}
 	}
 
-	bool IsWithinRange () {
+	private bool IsWithinRange () {
 		float distance = 0f;
 		if (target.Value) distance = (target.Value.transform.position - transform.position).magnitude;
 		else return false;
@@ -82,7 +107,7 @@ public class AttackTarget : NavMeshMovement {
 	}
 
 	private bool _lastFrameState = false;
-	bool CanMove () {
+	bool CanCatchUpWithPlayer () {
 		if (IsWithinRange() != _lastFrameState) {
 			_reactionTimeCounter = Time.time + targetTooCloseReactionTime.Value;
 		}
@@ -93,5 +118,39 @@ public class AttackTarget : NavMeshMovement {
 		} else {
 			return false;
 		}
+	}
+
+	//private float _moveToRandomPointTime = 0f;
+	private float _moveToRandomPointCounter = 0f;
+	private void CanMoveToRandomPoint () {
+		if (Time.time > _moveToRandomPointCounter) {
+			canAttack.Value = false;
+			_pauseAttackToMove = true;
+
+			//_moveToRandomPointTime = Random.Range(minAttackMovetime, maxAttackMovetime);
+			_moveToRandomPointCounter = Time.time + Random.Range(minAttackMovetime.Value, maxAttackMovetime.Value);
+		}
+	}
+
+	private bool _movingToRandomPoint = false;
+	private void MoveToRandomPoint () {
+		if (!_movingToRandomPoint) {
+			var direction = transform.forward;
+			var validDestination = false;
+			var attempts = 5;
+			var destination = transform.position;
+
+			while (!validDestination && attempts > 0) {
+				direction = direction + Random.insideUnitSphere * wanderRate.Value;
+				destination = transform.position + direction.normalized * Random.Range(minAttackMoveDistance.Value, maxAttackMoveDistance.Value);
+				validDestination = SamplePosition(destination);
+				attempts--;
+			}
+
+			if (validDestination) {
+				SetDestination(destination);
+			}
+		}
+		_movingToRandomPoint = true;
 	}
 }

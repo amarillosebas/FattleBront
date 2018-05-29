@@ -19,3 +19,7 @@ MonoBehaviour:
   maxWanderPause: 1.5
   wanderRate: 2
   targetTooCloseReactionTime: 2
+  minAttackMoveTime: 2
+  maxAttackMoveTime: 6
+  minAttackMoveDistance: 1
+  maxAttackMoveDistance: 4

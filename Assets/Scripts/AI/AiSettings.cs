@@ -32,6 +32,10 @@ public class AiSettings : MonoBehaviour {
 		behaviorTree.SetVariableValue("targetLayers", targetLayers);
 		behaviorTree.SetVariableValue("targetTag", targetTag);
 		behaviorTree.SetVariableValue("targetTooCloseReactionTime", statsInfo.targetTooCloseReactionTime);
+		behaviorTree.SetVariableValue("minAttackMoveTime", statsInfo.minAttackMoveTime);
+		behaviorTree.SetVariableValue("maxAttackMoveTime", statsInfo.maxAttackMoveTime);
+		behaviorTree.SetVariableValue("minAttackMoveDistance", statsInfo.minAttackMoveDistance);
+		behaviorTree.SetVariableValue("maxAttackMoveDistance", statsInfo.maxAttackMoveDistance);
 	}
 	
 	public bool GetTarget (out Transform t) {
